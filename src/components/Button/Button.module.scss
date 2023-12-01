@@ -1,10 +1,13 @@
 .wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     min-width: 100px;
-    padding: 9px 16px;
+    padding: 9px 14px;
+    border-radius: 4px;
     font-size: 1.6rem;
     font-weight: 700;
     font-family: var(--font-family);
-    border-radius: 4px;
     cursor: pointer;
     background-color: var(--white);
     border: 1px solid transparent;
@@ -13,11 +16,13 @@
     + .wrapper {
         margin-left: 8px;
     }
+
     &.disabled {
         pointer-events: none;
         opacity: 0.5;
     }
 }
+
 .icon + .title,
 .title + .icon {
     margin-left: 8px;
@@ -29,11 +34,11 @@
     text-align: center;
 }
 
-//button types
+// Button types
 .rounded {
-    box-shadow: 0 2px 8px rgb(0 0 0/6%);
-    border-color: rgba(22, 24, 35, 0.12);
     border-radius: 999px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-color: rgba(22, 24, 35, 0.12);
 
     &:hover {
         border-color: rgba(22, 24, 35, 0.2);
@@ -41,16 +46,17 @@
     }
 }
 
-.pimary {
+.primary {
+    color: var(--white);
     background-color: var(--primary);
     border-color: var(--primary);
-    color: var(--white);
 
     &:hover {
         border-color: var(--primary);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
     }
 }
+
 .outline {
     color: var(--primary);
     border-color: currentColor;
@@ -62,21 +68,18 @@
 }
 
 .text {
-    color: var(--black);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(22, 24, 35, 0.12);
-
     &:hover {
-        background-color: rgba(255, 255, 255, 0.04);
         text-decoration: underline;
     }
 }
-//button size
+
+// Button sizes
 .small {
     min-width: 88px;
     padding: 4px 16px;
 }
+
 .large {
-    min-width: 140px;
     padding: 14px 16px;
+    min-width: 140px;
 }
